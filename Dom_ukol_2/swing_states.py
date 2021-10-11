@@ -5,9 +5,6 @@ import numpy
 with requests.get("https://raw.githubusercontent.com/pesikj/progr2-python/master/data/1976-2020-president.csv") as r:
   open("1976-2020-president.csv", 'w', encoding="utf-8").write(r.text)
 
-with requests.get("https://raw.githubusercontent.com/pesikj/progr2-python/master/data/air_polution_ukol.csv") as r:
-  open("air_polution_ukol.csv", 'w', encoding="utf-8").write(r.text)
-
 president_elections = pandas.read_csv("1976-2020-president.csv")
 
 # Urči pořadí jednotlivých kandidátů v jednotlivých státech a v jednotlivých letech (pomocí metody rank()).
