@@ -14,8 +14,8 @@ kola['year'] = kola['timestamp'].dt.year
 
 # Vytvoř kontingenční tabulku, která porovná kód počasí (sloupec weather_code se sloupcem udávající rok.
 pandas.set_option('display.max_columns', None)
-kola_pivot = pandas.pivot_table(kola, values="cnt", index="weather_code", columns="year", aggfunc=numpy.count_nonzero, margins = True)
-# print(kola_pivot)
+kola_pivot = pandas.pivot_table(kola, values="cnt", index="weather_code", columns="year", aggfunc=numpy.sum, margins = False)
+print(kola_pivot)
 
 # Jako hodnoty v kontingenční tabulce zobraz relativní počty jízd pro jednotlivé kódy počasí v jednom roce.
 # Příklad možného výsledku by byl:
