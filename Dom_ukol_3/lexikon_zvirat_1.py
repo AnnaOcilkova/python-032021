@@ -28,8 +28,8 @@ zvirata = zvirata.set_index('id')
 # 1. datový typ je řetězec: isinstance(radek.image_src, str)
 # 2. hodnota začíná řetězcem "https://zoopraha.cz/images/": radek.image_src.startswith("https://zoopraha.cz/images/")
 # 3. hodnota končí buďto JPG nebo jpg.
-
-print(zvirata.columns)
+# Zvol si jeden ze způsobů procházení tabulky, a na každý řádek zavolej funkci check_url.
+# Pro každý řádek s neplatným odkazem vypiš název zvířete (title).
 
 def check_url(radek):
     if isinstance(radek.image_src, str):
@@ -45,11 +45,3 @@ def check_url(radek):
 
 for id, zvire in zvirata.iterrows():
     check_url(zvire)
-
-
-
-
-
-
-# Zvol si jeden ze způsobů procházení tabulky, a na každý řádek zavolej funkci check_url.
-# Pro každý řádek s neplatným odkazem vypiš název zvířete (title).
