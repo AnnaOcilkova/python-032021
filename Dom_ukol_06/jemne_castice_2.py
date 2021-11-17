@@ -43,4 +43,4 @@ print(mannwhitneyu(x, y, alternative = 'two-sided'))
 
 # Rozhodni, zda bys na hladině významnosti 5 % zamítla nulovou hypotézu. Své rozhodnutí napiš do programu
 
-P-hodnota je nizsi nez hladina vyznamnosti, nulovou hypotezu tedy zamitame.
+# P-hodnota je nizsi nez hladina vyznamnosti, nulovou hypotezu tedy zamitame.
