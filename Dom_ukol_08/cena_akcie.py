@@ -34,4 +34,3 @@ df_with_prediction = pandas.concat([csco_df, df_forecast]).iloc[-55:]
 df_with_prediction[["Close", "Prediction"]].plot()
 plt.show()
 
-

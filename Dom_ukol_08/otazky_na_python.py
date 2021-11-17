@@ -30,7 +30,6 @@ res = mod.fit()
 questions["HM"] = res.fittedvalues
 # questions[["HM", "python"]].plot()
 
-
 questions_forecast = pandas.DataFrame(res.forecast(12), columns=["Prediction"])
 questions_with_prediction = pandas.concat([questions, questions_forecast])
 questions_with_prediction[["python", "Prediction"]].plot()
