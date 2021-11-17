@@ -15,13 +15,15 @@ pandas.set_option('display.max_rows', None)
 # Načti dataset a převeď sloupec date (datum měření) na typ datetime.
 
 castice['date'] = pandas.to_datetime(castice['date'])
-castice = castice.dropna()
+# castice = castice.dropna()
 
 # Dále pokračuj následujícími kroky:
 #
 # Z dat vyber data za leden roku 2019 a 2020.
 
-castice_vyber = castice[(castice['date'].dt.month == 1) & ((castice['date'].dt.year == 2019) | (castice['date'].dt.year == 2020))]
+castice_vyber = castice[(castice['date'].dt.month == 1)]
+castice_vyber = castice_vyber[(castice_vyber['date'].dt.year == 2019) | (castice_vyber['date'].dt.year == 2020)]
+
 
 # Porovnej průměrné množství jemných částic ve vzduchu v těchto dvou měsících pomocí Mann–Whitney U testu.
 # Formuluj hypotézy pro oboustranný test (nulovou i alternativní) a napiš je do komentářů v programu.
@@ -37,7 +39,6 @@ castice_vyber = castice_vyber.set_index("year")
 
 x = castice_vyber.loc[2019, 'pm25']
 y = castice_vyber.loc[2020, 'pm25']
-
-print(mannwhitneyu(x, y))
+print(mannwhitneyu(x, y, alternative = 'two-sided'))
 
 # Rozhodni, zda bys na hladině významnosti 5 % zamítla nulovou hypotézu. Své rozhodnutí napiš do programu
