@@ -25,8 +25,7 @@ prices_XMR = prices[prices['Symbol'] == 'XMR']
 # přičti k němu 1 (nemusíš dělit stem jako v lekci, hodnoty jsou jako desetinná čísla, nikoli jako procenta) a převeď jej na seznam pomocí metody .tolist().
 
 prices_XMR['Pct_change'] = prices_XMR.groupby('Symbol')['Close'].pct_change() + 1
-prices_XMR = prices_XMR[prices_XMR['Pct_change'].notna()]
-prices_XMR_list = prices_XMR['Pct_change'].values.tolist()
+prices_XMR_list = prices_XMR['Pct_change'].dropna().tolist()
 
 # Následně vypočti geometrický průměr z těchto hodnot.
 
