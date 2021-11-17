@@ -42,3 +42,5 @@ y = castice_vyber.loc[2020, 'pm25']
 print(mannwhitneyu(x, y, alternative = 'two-sided'))
 
 # Rozhodni, zda bys na hladině významnosti 5 % zamítla nulovou hypotézu. Své rozhodnutí napiš do programu
+
+P-hodnota je nizsi nez hladina vyznamnosti, nulovou hypotezu tedy zamitame.
