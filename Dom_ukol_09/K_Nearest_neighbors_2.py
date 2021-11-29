@@ -3,10 +3,7 @@ import requests
 import matplotlib.pyplot as plt
 
 from sklearn.metrics import (
-    confusion_matrix,
-    precision_score,
     f1_score,
-    ConfusionMatrixDisplay,
 )
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
