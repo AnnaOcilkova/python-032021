@@ -54,5 +54,7 @@ print(f)
 # největší důležitost má proměnná plant-stand
 
 # s úpravou modelu pro použití pouze jedné proměnné jsem si bohužel neporadila...
+# resp. našla jsem možná nějaký způsob pomocí select_features, ale nepoadařilo se mi to udělat pomocí vyfiltrování
+# jen toho jednoho sloupce, jak jsi radila na poslední lekci
 
 # pipeline - https://scikit-learn.org/stable/tutorial/statistical_inference/putting_together.html
